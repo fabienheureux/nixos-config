@@ -78,7 +78,6 @@ with pkgs; [
   typescript-language-server
   tailwindcss-language-server
   efm-langserver
-  rust-analyzer
   uv
   ruff
   prettierd
