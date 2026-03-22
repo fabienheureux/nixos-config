@@ -1,139 +1,82 @@
-{ pkgs, ... }:
-let
-  myPython = pkgs.python3.withPackages (ps: with ps; [
-    slpp
-    pip
-    rich
-    mysql-connector
-    virtualenv
-    black
-    requests
-    faker
-    textual
-    pyqt5
-    pyyaml
-    feedparser
-    python-dateutil
-  ]);
+{ pkgs }:
 
-  myPHP = pkgs.php82.withExtensions ({ enabled, all }: enabled ++ (with all; [
-    xdebug
-  ]));
-
-  myFonts = import ./fonts.nix { inherit pkgs; };
-in
 with pkgs; [
-  # A
-  act # Run Github actions locally
-  age # File encryption tool
-  age-plugin-yubikey # YubiKey plugin for age encryption
-  ghostty # GPU-accelerated terminal emulator
-  aspell # Spell checker
-  aspellDicts.en # English dictionary for aspell
+  # General packages for development and system management
+  bash-completion
+  bat
+  btop
+  coreutils
+  killall
+  openssh
+  sqlite
+  wget
+  zip
 
-  # B
-  bash-completion # Bash completion scripts
-  bat # Cat clone with syntax highlighting
-  btop # System monitor and process viewer
+  # Encryption and security tools
+  age
+  age-plugin-yubikey
+  gnupg
+  libfido2
 
-  # C
-  coreutils # Basic file/text/shell utilities
+  # Cloud-related tools and SDKs
+  docker
+  docker-compose
 
-  # D
-  direnv # Environment variable management per directory
-  difftastic # Structural diff tool
-  doctl # DigitalOcean CLI
-  dust # Disk usage analyzer
+  # Media-related packages
+  dejavu_fonts
+  ffmpeg
+  fd
+  font-awesome
+  hack-font
+  noto-fonts
+  noto-fonts-color-emoji
+  meslo-lgs-nf
+  nerd-fonts.fira-code
 
-  # F
-  fd # Fast find alternative
-  ffmpeg # Multimedia framework
-  flyctl # Fly.io tools
-  fzf # Fuzzy finder
+  # Node.js development tools
+  nodejs_24
 
-  # G
-  go # Go
-  gcc # GNU Compiler Collection
-  gh # GitHub CLI
-  glow # Markdown renderer for terminal
-  gnupg # GNU Privacy Guard
-  gopls # Go language server
+  # Text and terminal utilities
+  htop
+  jetbrains-mono
+  jq
+  ripgrep
+  tree
+  unrar
+  unzip
 
-  # H
-  htop # Interactive process viewer
-  hunspell # Spell checker
+  # Development tools
+  curl
+  gh
+  lazygit
+  fzf
+  direnv
 
-  # I
-  iftop # Network bandwidth monitor
-  imagemagick # Image manipulation toolkit
-  intelephense # PHP LSP server
+  # Shell and prompt
+  fish
+  starship
 
-  # J
-  jetbrains.phpstorm # PHP IDE
-  jpegoptim # JPEG optimizer
-  jq # JSON processor
+  # Editor
+  helix
 
-  # K
-  killall # Kill processes by name
-  kubectl # Kubernetes CLI
+  # Task runner and version manager
+  just
+  mise
 
-  # L
-  linear-cli # Linear project management CLI
-  lnav # Log file navigator
-  libfido2 # FIDO2 library
+  # Diff and search
+  difftastic
 
-  # M
-  myPHP # Custom PHP with extensions
-  myPython # Custom Python with packages
+  # Python packages
+  python3
+  virtualenv
 
-  # N
-  ncurses # Terminal control library with terminfo database
-  ncdu # Disk space utility
-  neofetch # System information tool
-  ngrok # Secure tunneling service
-  nodejs_20 # Node.js JavaScript runtime (includes npm)
-
-  # O
-  openssh # SSH client and server
-
-  # P
-  pandoc # Document converter
-  php82Packages.composer # PHP dependency manager
-  deployer # PHP deployment tool
-  php82Packages.php-cs-fixer # PHP code style fixer
-  php82Packages.phpstan # PHP static analysis tool
-  phpactor # PHP language server with better refactoring support
-  phpunit # PHP testing framework
-  pngquant # PNG compression tool
-
-  # Q
-  qt5.qtbase # Qt5 base library with platform plugins
-
-  # R
-  ripgrep # Fast text search tool
-  repomix # AI tooling
-
-  # S
-  slack # Team communication app
-  sqlite # SQL database engine
-
-  # T
-  terraform # Infrastructure as code tool
-  terraform-ls # Terraform language server
-  tflint # Terraform linter
-  tmux # Terminal multiplexer
-  tree # Directory tree viewer
-
-  # U
-  unrar # RAR archive extractor
-  unzip # ZIP archive extractor
-  uv # Python package installer
-
-  # W
-  wget # File downloader
-
-  # Z
-  zed-editor
-  zip # ZIP archive creator
-  zsh-powerlevel10k # Zsh theme
-] ++ myFonts
+  # Helix LSP servers and tools
+  vscode-langservers-extracted
+  typescript-language-server
+  tailwindcss-language-server
+  efm-langserver
+  rust-analyzer
+  uv
+  ruff
+  prettierd
+]
