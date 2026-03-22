@@ -21,6 +21,8 @@ with pkgs; [
   # Cloud-related tools and SDKs
   docker
   docker-compose
+  kubectl
+  scaleway-cli
 
   # Media-related packages
   dejavu_fonts
@@ -51,6 +53,8 @@ with pkgs; [
   lazygit
   fzf
   direnv
+  rustup
+  go
 
   # Shell and prompt
   fish

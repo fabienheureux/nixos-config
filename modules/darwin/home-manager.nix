@@ -120,6 +120,88 @@ in
       };
       programs = {} // import ../shared/home-manager.nix { inherit config pkgs lib; };
 
+      accounts.email.accounts = {
+        "deuxfleurs" = {
+          primary = true;
+          address = "contact@fabienlefrapper.me";
+          realName = "Fabien Le Frapper";
+          userName = "contact@fabienlefrapper.me";
+          imap = {
+            host = "imap.deuxfleurs.fr";
+            port = 993;
+            tls.enable = true;
+          };
+          smtp = {
+            host = "smtp.deuxfleurs.fr";
+            port = 465;
+            tls.enable = true;
+          };
+          thunderbird.enable = true;
+        };
+        "beta-gouv" = {
+          address = "fabien.le.frapper@ext.beta.gouv.fr";
+          realName = "Fabien Le Frapper";
+          userName = "fabien.le.frapper@ext.beta.gouv.fr";
+          imap = {
+            host = "imap.ext.beta.gouv.fr";
+            port = 993;
+            tls.enable = true;
+          };
+          smtp = {
+            host = "smtp.ext.beta.gouv.fr";
+            port = 465;
+            tls.enable = true;
+          };
+          thunderbird.enable = true;
+        };
+      };
+
+      programs.thunderbird = {
+        enable = true;
+        package = pkgs.thunderbird;
+        profiles.default = {
+          isDefault = true;
+        };
+      };
+
+      home.file."notes/.obsidian/core-plugins.json".text = builtins.toJSON {
+        "file-explorer" = true;
+        "global-search" = true;
+        "switcher" = true;
+        "graph" = true;
+        "backlink" = true;
+        "canvas" = true;
+        "outgoing-link" = true;
+        "tag-pane" = true;
+        "footnotes" = false;
+        "properties" = true;
+        "page-preview" = true;
+        "daily-notes" = true;
+        "templates" = true;
+        "note-composer" = true;
+        "command-palette" = true;
+        "slash-command" = false;
+        "editor-status" = true;
+        "bookmarks" = true;
+        "markdown-importer" = false;
+        "zk-prefixer" = false;
+        "random-note" = false;
+        "outline" = true;
+        "word-count" = true;
+        "slides" = false;
+        "audio-recorder" = false;
+        "workspaces" = false;
+        "file-recovery" = true;
+        "publish" = false;
+        "sync" = false;
+        "bases" = true;
+        "webviewer" = false;
+      };
+
+      home.file."notes/.obsidian/daily-notes.json".text = builtins.toJSON {
+        folder = "Journal";
+      };
+
       # Marked broken Oct 20, 2022 check later to remove this
       # https://github.com/nix-community/home-manager/issues/3344
       manual.manpages.enable = false;

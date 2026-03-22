@@ -9,8 +9,10 @@ _:
 
   # Communication Tools
   "discord"
+  "mattermost"
   "slack"
   "telegram"
+  "thunderbird"
 
   # Utility Tools
   "appcleaner"
@@ -21,6 +23,8 @@ _:
   "vlc"
 
   # Productivity Tools
+  "bitwarden"
+  "obsidian"
   "raycast"
 
   # Browsers
