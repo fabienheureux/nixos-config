@@ -113,6 +113,9 @@
           specialArgs = inputs // { inherit user; };
           modules = [
             home-manager.darwinModules.home-manager
+            {
+              home-manager.sharedModules = [ ./modules/shared/home-manager-modules.nix ];
+            }
             nix-homebrew.darwinModules.nix-homebrew
             {
               nix-homebrew = {
@@ -142,7 +145,7 @@
               chaotic.nixosModules.default
               home-manager.nixosModules.home-manager {
                 home-manager = {
-                  sharedModules = [ plasma-manager.homeModules.plasma-manager ]; 
+                  sharedModules = [ plasma-manager.homeModules.plasma-manager ./modules/shared/home-manager-modules.nix ];
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.${user} = { config, pkgs, lib, ... }:
@@ -165,7 +168,7 @@
               chaotic.nixosModules.default
               home-manager.nixosModules.home-manager {
                 home-manager = {
-                  sharedModules = [ plasma-manager.homeModules.plasma-manager ]; 
+                  sharedModules = [ plasma-manager.homeModules.plasma-manager ./modules/shared/home-manager-modules.nix ];
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.${user} = { config, pkgs, lib, ... }:

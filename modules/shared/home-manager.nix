@@ -80,7 +80,6 @@ let name = "Fabien Le Frapper";
     ];
     matchBlocks = {
       "*" = {
-        # Set the default values we want to keep
         sendEnv = [ "LANG" "LC_*" ];
         hashKnownHosts = true;
       };

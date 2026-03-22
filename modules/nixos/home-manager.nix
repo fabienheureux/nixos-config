@@ -31,7 +31,7 @@ in
     };
   };
 
-  programs = shared-programs // { 
+  programs = shared-programs // {
     gpg.enable = true;
     
     rofi = {
