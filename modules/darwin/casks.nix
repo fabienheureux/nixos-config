@@ -5,6 +5,7 @@ _:
   "claude"
   "insomnia"
   "ngrok"
+  "orbstack"
   "wireshark-app"
 
   # Communication Tools
