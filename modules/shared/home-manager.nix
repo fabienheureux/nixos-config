@@ -4,6 +4,11 @@ let name = "Fabien Le Frapper";
     user = "fabienlefrapper";
     email = "contact@fabienlefrapper.me"; in
 {
+  starship = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
   # Shared shell configuration
   fish = {
     enable = true;

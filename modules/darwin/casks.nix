@@ -4,18 +4,13 @@ _:
   # Development Tools
   "claude"
   "insomnia"
-  "tableplus"
   "ngrok"
-  "postico"
-  "visual-studio-code"
   "wireshark-app"
 
   # Communication Tools
   "discord"
-  "loom"
   "slack"
   "telegram"
-  "zoom"
 
   # Utility Tools
   "appcleaner"
@@ -27,8 +22,8 @@ _:
 
   # Productivity Tools
   "raycast"
-  "asana"
 
   # Browsers
+  "firefox@developer-edition"
   "google-chrome"
 ]

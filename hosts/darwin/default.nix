@@ -61,10 +61,10 @@ let user = "fabienlefrapper"; in
       };
 
       dock = {
-        autohide = false;
+        autohide = true;
         show-recents = false;
         launchanim = true;
-        orientation = "bottom";
+        orientation = "left";
         tilesize = 48;
       };
 

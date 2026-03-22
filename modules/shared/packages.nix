@@ -54,7 +54,6 @@ with pkgs; [
 
   # Shell and prompt
   fish
-  starship
 
   # Editor
   helix

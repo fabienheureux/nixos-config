@@ -20,6 +20,8 @@ in
 
   programs.fish.enable = true;
 
+  environment.shells = [ pkgs.fish ];
+
   homebrew = {
     enable = true;
     casks = pkgs.callPackage ./casks.nix {};
@@ -33,6 +35,7 @@ in
   # Enable home-manager
   home-manager = {
     useGlobalPkgs = true;
+    backupFileExtension = "bak";
     users.${user} = { pkgs, config, lib, ... }:{
       home = {
         enableNixpkgsReleaseCheck = false;
