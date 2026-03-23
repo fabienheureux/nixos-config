@@ -465,11 +465,11 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1774187057,
-        "narHash": "sha256-UGBD4T3HcFK3odN4Z2k2YvxVNUST7gWvD/Dxt2YWiV8=",
+        "lastModified": 1774254326,
+        "narHash": "sha256-z795QnjPfRiFcfJeLbuYUtVn/JeEv88GhpLXPTc4vro=",
         "ref": "refs/heads/main",
-        "rev": "230fd6c44d9be467034f88d8113cd2091d4877c2",
-        "revCount": 1,
+        "rev": "daff7cf1fd6140861cfb57f96ef369e2432568c4",
+        "revCount": 2,
         "type": "git",
         "url": "ssh://git@git.deuxfleurs.fr/fabientot/nix-secrets.git"
       },

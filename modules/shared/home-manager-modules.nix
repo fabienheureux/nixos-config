@@ -29,7 +29,15 @@ in
         port = 465;
         tls.enable = true;
       };
-      thunderbird.enable = true;
+      thunderbird = {
+        enable = true;
+        settings = id: {
+          "calendar.registry.deuxfleurs-caldav.uri" = "http://sogo.deuxfleurs.fr/SOGo/dav/fabienheureux/Calendar/personal/";
+          "calendar.registry.deuxfleurs-caldav.username" = "fabienheureux@deuxfleurs.fr";
+          "calendar.registry.deuxfleurs-caldav.type" = "caldav";
+          "calendar.registry.deuxfleurs-caldav.name" = "Deuxfleurs";
+        };
+      };
     };
     "beta-gouv" = {
       address = "fabien.le.frapper@ext.beta.gouv.fr";
@@ -45,7 +53,15 @@ in
         port = 465;
         tls.enable = true;
       };
-      thunderbird.enable = true;
+      thunderbird = {
+        enable = true;
+        settings = id: {
+          "calendar.registry.beta-gouv-caldav.uri" = "https://webmail.beta.gouv.fr/dav/principals/users/951/";
+          "calendar.registry.beta-gouv-caldav.username" = "fabien.le.frapper@ext.beta.gouv.fr";
+          "calendar.registry.beta-gouv-caldav.type" = "caldav";
+          "calendar.registry.beta-gouv-caldav.name" = "Beta Gouv";
+        };
+      };
     };
   };
 
