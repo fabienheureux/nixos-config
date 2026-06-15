@@ -15,14 +15,13 @@ with pkgs; [
   # Encryption and security tools
   age
   age-plugin-yubikey
+  bitwarden-cli
   gnupg
   libfido2
 
   # Cloud-related tools and SDKs
-  docker
-  docker-compose
-  kubectl
   scaleway-cli
+  scalingo
 
   # Media-related packages
   dejavu_fonts
@@ -68,6 +67,11 @@ with pkgs; [
 
   # Diff and search
   difftastic
+
+  # Database clients
+  gdal
+  geos
+  postgresql
 
   # Python packages
   python3

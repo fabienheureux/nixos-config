@@ -1,34 +1,15 @@
 _:
 
 [
-  # Development Tools
-  "claude"
-  "insomnia"
-  "ngrok"
-  "orbstack"
+  # No nixpkgs equivalent on Darwin
+  "appcleaner"
   "wireshark-app"
 
-  # Communication Tools
-  "discord"
-  "mattermost"
-  "slack"
-  "telegram"
-  "thunderbird"
+  # Claude desktop (linux flake doesn't cover Darwin)
+  "claude"
 
-  # Utility Tools
-  "appcleaner"
-  "syncthing-app"
-
-  # Entertainment Tools
-  "steam"
+  # No aarch64-darwin support in nixpkgs
   "vlc"
-
-  # Productivity Tools
-  "bitwarden"
-  "obsidian"
-  "raycast"
-
-  # Browsers
-  "firefox@developer-edition"
-  "google-chrome"
+  "steam"
+  "mattermost"
 ]

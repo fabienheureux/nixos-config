@@ -25,11 +25,6 @@ in
   homebrew = {
     enable = true;
     casks = pkgs.callPackage ./casks.nix {};
-    # onActivation.cleanup = "uninstall";
-
-    masApps = {
-      # "wireguard" = 1451685025;
-    };
   };
 
   # Enable home-manager

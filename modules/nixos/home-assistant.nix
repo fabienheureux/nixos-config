@@ -139,9 +139,10 @@ in
   # Ensure Home Assistant has access to image directory
   systemd.services.home-assistant = {
     serviceConfig = {
-      # Ensure the garage snapshots directory exists
-      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /var/lib/hass/garage-snapshots";
-      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /var/lib/hass/scripts";
+      ExecStartPre = [
+        "${pkgs.coreutils}/bin/mkdir -p /var/lib/hass/garage-snapshots"
+        "${pkgs.coreutils}/bin/mkdir -p /var/lib/hass/scripts"
+      ];
     };
   };
 

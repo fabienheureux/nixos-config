@@ -21,23 +21,6 @@
         "type": "github"
       }
     },
-    "brew-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1763638478,
-        "narHash": "sha256-n/IMowE9S23ovmTkKX7KhxXC2Yq41EAVFR2FBIXPcT8=",
-        "owner": "Homebrew",
-        "repo": "brew",
-        "rev": "fbfdbaba008189499958a7aeb1e2c36ab10c067d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Homebrew",
-        "ref": "5.0.3",
-        "repo": "brew",
-        "type": "github"
-      }
-    },
     "chaotic": {
       "inputs": {
         "flake-schemas": "flake-schemas",
@@ -241,54 +224,6 @@
         "type": "github"
       }
     },
-    "homebrew-bundle": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1745335228,
-        "narHash": "sha256-TIKR2UgtyUmHLNZp255/vLs+1I10hXe+sciMEbAGFwE=",
-        "owner": "homebrew",
-        "repo": "homebrew-bundle",
-        "rev": "a3265c84b232e13048ecbf6fc18a2eedfadbeb08",
-        "type": "github"
-      },
-      "original": {
-        "owner": "homebrew",
-        "repo": "homebrew-bundle",
-        "type": "github"
-      }
-    },
-    "homebrew-cask": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1766064371,
-        "narHash": "sha256-S/kH7FcAWBOk3xdflaWtUQTXXnHcBKc82qSsN503NVo=",
-        "owner": "homebrew",
-        "repo": "homebrew-cask",
-        "rev": "94e700d7e8a6a00c3e665f7b1a01fefb62edaa47",
-        "type": "github"
-      },
-      "original": {
-        "owner": "homebrew",
-        "repo": "homebrew-cask",
-        "type": "github"
-      }
-    },
-    "homebrew-core": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1766064550,
-        "narHash": "sha256-d5VgYvGIzlN7MBb5NJzga58ioeRjxXNczc6klLMi45I=",
-        "owner": "homebrew",
-        "repo": "homebrew-core",
-        "rev": "d5c03b92d2819af92b5f2c2977941d14e254587d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "homebrew",
-        "repo": "homebrew-core",
-        "type": "github"
-      }
-    },
     "jovian": {
       "inputs": {
         "nix-github-actions": "nix-github-actions",
@@ -331,24 +266,6 @@
         "owner": "zhaofengli",
         "ref": "matrix-name",
         "repo": "nix-github-actions",
-        "type": "github"
-      }
-    },
-    "nix-homebrew": {
-      "inputs": {
-        "brew-src": "brew-src"
-      },
-      "locked": {
-        "lastModified": 1764473698,
-        "narHash": "sha256-C91gPgv6udN5WuIZWNehp8qdLqlrzX6iF/YyboOj6XI=",
-        "owner": "zhaofengli-wip",
-        "repo": "nix-homebrew",
-        "rev": "6a8ab60bfd66154feeaa1021fc3b32684814a62a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zhaofengli-wip",
-        "repo": "nix-homebrew",
         "type": "github"
       }
     },
@@ -432,10 +349,6 @@
         "disko": "disko",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager_3",
-        "homebrew-bundle": "homebrew-bundle",
-        "homebrew-cask": "homebrew-cask",
-        "homebrew-core": "homebrew-core",
-        "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_3",
         "plasma-manager": "plasma-manager",
         "secrets": "secrets"
@@ -465,11 +378,11 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1774254326,
-        "narHash": "sha256-z795QnjPfRiFcfJeLbuYUtVn/JeEv88GhpLXPTc4vro=",
+        "lastModified": 1781561174,
+        "narHash": "sha256-+p1EST+lf3QN7OKEXd1SmgfKHQdmwfKsIjU+HvfeGNI=",
         "ref": "refs/heads/main",
-        "rev": "daff7cf1fd6140861cfb57f96ef369e2432568c4",
-        "revCount": 2,
+        "rev": "a778da6090620504e1c5807aa0400d960e367c41",
+        "revCount": 4,
         "type": "git",
         "url": "ssh://git@git.deuxfleurs.fr/fabientot/nix-secrets.git"
       },

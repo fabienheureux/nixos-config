@@ -25,6 +25,15 @@ let user = "fabienlefrapper"; in
         owner = "${user}";
         group = "staff";
       };
+
+      "bitwarden-api-key" = {
+        symlink = true;
+        path = "/Users/${user}/.config/bitwarden/api-key";
+        file = "${secrets}/bitwarden-api-key.age";
+        mode = "600";
+        owner = "${user}";
+        group = "staff";
+      };
     };
   };
 }

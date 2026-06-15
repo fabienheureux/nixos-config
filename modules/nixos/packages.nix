@@ -54,7 +54,9 @@ shared-packages ++ [
   
   cliphist # Clipboard history manager for Wayland
 
+  docker # Container runtime
   docker-compose # Docker Compose tool
+  kubectl
 
   ninja # Fast build system
 

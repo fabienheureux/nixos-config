@@ -43,6 +43,14 @@ let user = "dustin"; in
         owner = "${user}";
         group = "wheel";
       };
+      "bitwarden-api-key" = {
+        symlink = true;
+        path = "/home/fabienlefrapper/.config/bitwarden/api-key";
+        file = "${secrets}/bitwarden-api-key.age";
+        mode = "600";
+        owner = "fabienlefrapper";
+        group = "users";
+      };
     };
   };
 

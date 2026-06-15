@@ -33,12 +33,63 @@ let name = "Fabien Le Frapper";
       set -gx VISUAL hx
       set -gx ALTERNATE_EDITOR ""
 
+      # Bitwarden CLI credentials from agenix secret
+      if test -f $HOME/.config/bitwarden/api-key
+        source $HOME/.config/bitwarden/api-key
+      end
+
       # Aliases
       alias search="rg -p --glob '!node_modules/*'"
       alias diff="difft"
       alias ls="ls --color=auto"
       alias pn="pnpm"
       alias px="pnpx"
+
+      # Django / Python
+      alias djm="uv run python manage.py"
+      alias djs="uv run python manage.py runserver"
+      alias djsh="uv run python manage.py shell"
+      alias djt="uv run pytest"
+      alias djmg="uv run python manage.py migrate"
+      alias djmm="uv run python manage.py makemigrations"
+      alias djsu="uv run python manage.py createsuperuser"
+
+      # uv
+      alias uvs="uv sync"
+      alias uvl="uv lock"
+
+      # Git
+      alias gsw="git switch"
+      alias gswm="git switch main"
+      alias gp="git push"
+      alias gap="git add -p"
+      alias gst="git stash"
+      alias gsta="git stash apply"
+      alias grb="git rebase origin/main"
+      alias gri="git rebase -i"
+      alias gpl="git pull origin main --rebase"
+      alias grs="git reset"
+
+      # pre-commit
+      alias pca="pre-commit run --all-files"
+      alias pcf="pre-commit run --files (git diff --name-only origin/main...HEAD)"
+
+      # npm
+      alias nrw="npm run watch"
+      alias nrd="npm run dev"
+      alias nrb="npm run build"
+      alias nrt="npm run test"
+
+      # make
+      alias mkdb="make db-restore-local-from-prod"
+
+      # Docker
+      alias dps="docker ps"
+      alias dcs="docker compose stop"
+      alias dcu="docker compose up -d"
+
+      # qobuz-dl
+      alias qdl="uvx qobuz-dl dl"
 
       # nix shell helper
       function shell

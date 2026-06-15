@@ -21,21 +21,7 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-homebrew = {
-      url = "github:zhaofengli-wip/nix-homebrew";
-    };
-    homebrew-bundle = {
-      url = "github:homebrew/homebrew-bundle";
-      flake = false;
-    };
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
-      flake = false;
-    };
-    homebrew-cask = {
-      url = "github:homebrew/homebrew-cask";
-      flake = false;
-    };
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,7 +35,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, darwin, claude-desktop, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, home-manager, plasma-manager, nixpkgs, flake-utils, disko, agenix, secrets, chaotic } @inputs:
+  outputs = { self, darwin, claude-desktop, home-manager, plasma-manager, nixpkgs, flake-utils, disko, agenix, secrets, chaotic } @inputs:
     let
       user = "fabienlefrapper";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -114,22 +100,14 @@
           modules = [
             home-manager.darwinModules.home-manager
             {
-              home-manager.sharedModules = [ ./modules/shared/home-manager-modules.nix ];
-            }
-            nix-homebrew.darwinModules.nix-homebrew
-            {
-              nix-homebrew = {
-                inherit user;
-                enable = true;
-                taps = {
-                  "homebrew/homebrew-core" = homebrew-core;
-                  "homebrew/homebrew-cask" = homebrew-cask;
-                  "homebrew/homebrew-bundle" = homebrew-bundle;
+              home-manager = {
+                sharedModules = [ ./modules/shared/home-manager-modules.nix ];
+                extraSpecialArgs = {
+                  inherit secrets;
                 };
-                mutableTaps = false;
-                autoMigrate = true;
               };
             }
+
             ./hosts/darwin
           ];
         }
@@ -150,6 +128,9 @@
                   useUserPackages = true;
                   users.${user} = { config, pkgs, lib, ... }:
                     import ./modules/nixos/home-manager.nix { inherit config pkgs lib inputs; };
+                  extraSpecialArgs = {
+                    inherit secrets;
+                  };
                 };
               }
               ./hosts/nixos
@@ -173,6 +154,9 @@
                   useUserPackages = true;
                   users.${user} = { config, pkgs, lib, ... }:
                     import ./modules/nixos/home-manager.nix { inherit config pkgs lib inputs; };
+                  extraSpecialArgs = {
+                    inherit secrets;
+                  };
                 };
               }
               ./hosts/nixos/garfield
