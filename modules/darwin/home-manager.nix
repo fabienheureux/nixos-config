@@ -128,10 +128,6 @@ in
       username = user;
       entries = [
         { path = "/Applications/Ghostty.app/"; }
-        { path = "/Applications/Firefox Developer Edition.app/"; }
-        { path = "/System/Applications/Messages.app/"; }
-        { path = "/System/Applications/Notes.app/"; }
-        { path = "/System/Applications/Music.app/"; }
         { path = "/System/Applications/System Settings.app/"; }
         {
           path = "${config.users.users.${user}.home}/Downloads";

@@ -64,7 +64,7 @@ let user = "fabienlefrapper"; in
         autohide = true;
         show-recents = false;
         launchanim = true;
-        orientation = "left";
+        orientation = "right";
         tilesize = 48;
       };
 

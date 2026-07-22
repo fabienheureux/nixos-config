@@ -12,6 +12,7 @@ shared-packages ++ [
 
   # Communication
   discord
+  element-desktop
   slack
   telegram-desktop
   thunderbird
@@ -27,8 +28,15 @@ shared-packages ++ [
   # Dev tools
   insomnia
   ngrok
+  opencode
   orbstack
 
   # Sync
   syncthing
+
+  # VPN
+  wireguard-tools # wg, wg-quick client
+
+  # Audio
+  vcv-rack
 ]

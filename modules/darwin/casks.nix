@@ -11,5 +11,8 @@ _:
   # No aarch64-darwin support in nixpkgs
   "vlc"
   "steam"
-  "mattermost"
+  # "mattermost"
+
+  # Zen Browser
+  "zen"
 ]

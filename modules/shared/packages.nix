@@ -18,8 +18,11 @@ with pkgs; [
   bitwarden-cli
   gnupg
   libfido2
+  sops
 
   # Cloud-related tools and SDKs
+  opentofu
+  terragrunt
   scaleway-cli
   scalingo
 
@@ -60,6 +63,7 @@ with pkgs; [
 
   # Editor
   helix
+  zed-editor
 
   # Task runner and version manager
   just
