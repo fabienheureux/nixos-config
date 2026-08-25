@@ -5,13 +5,6 @@
     flake-utils.url = "github:numtide/flake-utils";
     home-manager.url = "github:nix-community/home-manager";
     agenix.url = "github:ryantm/agenix";
-    claude-desktop = {
-      url = "github:k3d3/claude-desktop-linux-flake";
-      inputs = { 
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
-      };
-    };
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,7 +28,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, darwin, claude-desktop, home-manager, plasma-manager, nixpkgs, flake-utils, disko, agenix, secrets, chaotic } @inputs:
+  outputs = { self, darwin, home-manager, plasma-manager, nixpkgs, flake-utils, disko, agenix, secrets, chaotic } @inputs:
     let
       user = "fabienlefrapper";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];

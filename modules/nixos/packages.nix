@@ -70,8 +70,6 @@ shared-packages ++ [
 
   # chromedriver # Chrome webdriver for testing (commented out due to nodejs version conflict)
 
-  #inputs.claude-desktop.packages."${pkgs.system}".claude-desktop-with-fhs
-
   discord # Voice and text chat
 
   xclip # Manage clipboard from command line
@@ -102,6 +100,7 @@ shared-packages ++ [
 
   screenkey # Display pressed keys on screen
   simplescreenrecorder # Screen recording tool
+  super-productivity # Task and time management app
 
   unixtools.ifconfig # Network interface configuration
   unixtools.netstat # Network statistics

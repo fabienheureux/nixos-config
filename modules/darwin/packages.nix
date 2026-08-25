@@ -1,8 +1,13 @@
-{ pkgs }:
+{ pkgs, lib }:
 
 with pkgs;
-let shared-packages = import ../shared/packages.nix { inherit pkgs; }; in
-shared-packages ++ [
+let
+  shared-packages = import ../shared/packages.nix { inherit pkgs; };
+  # zed-editor has no aarch64-darwin cache on Hydra and builds from source;
+  # installed via Homebrew cask (casks.nix) instead
+  darwin-shared-packages = lib.filter (p: p != zed-editor) shared-packages;
+in
+darwin-shared-packages ++ [
   # D
   dockutil # Manage icons in the dock
 

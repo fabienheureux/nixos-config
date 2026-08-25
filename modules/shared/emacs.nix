@@ -115,8 +115,6 @@ let
     rotate
     exec-path-from-shell
     key-chord  # For double-tap key bindings
-    transient  # Required for claude-code.el (0.7.5+)
-    eat  # Terminal emulator for claude-code.el
     
     # Note: copilot needs special handling via manual installation
   ]);

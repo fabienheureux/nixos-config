@@ -1,4 +1,4 @@
-{ agenix, config, pkgs, ... }:
+{ agenix, config, pkgs, lib, ... }:
 
 let user = "fabienlefrapper"; in
 
@@ -37,7 +37,7 @@ let user = "fabienlefrapper"; in
   # Load configuration that is shared across systems
   environment.systemPackages = with pkgs; [
     agenix.packages."${pkgs.system}".default
-  ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
+  ] ++ (lib.filter (p: p != zed-editor) (import ../../modules/shared/packages.nix { inherit pkgs; }));
 
   system = {
     checks.verifyNixPath = false;

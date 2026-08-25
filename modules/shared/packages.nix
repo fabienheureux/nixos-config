@@ -44,6 +44,7 @@ with pkgs; [
   htop
   jetbrains-mono
   jq
+  ncdu
   ripgrep
   tree
   unrar
